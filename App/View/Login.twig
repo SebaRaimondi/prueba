@@ -1,8 +1,12 @@
-{% extends 'Base.twig' %} {% set page = 'Login' %} {% block body %}
-<a href='index.php'> Home </a>
-<form action="index.php?controller=Login&action=login" method="post">
-    <input type="text" name="user" placeholder="Usuario" required autofocus>
-    <input type="pass" name="pass" placeholder="Contraseña" required>
+{% extends 'Base.twig' %}
+{% set page = 'Login' %}
+{% block body %}
+  <a href='index.php'>
+    Home
+  </a>
+  <form action="index.php?controller=Login&action=login" method="post">
+    <input type="text" name="user" placeholder="Usuario" required="required" autofocus="autofocus">
+    <input type="pass" name="pass" placeholder="Contraseña" required="required">
     <input type="submit" value="Enviar">
-</form>
+  </form>
 {% endblock %}

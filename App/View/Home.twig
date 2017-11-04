@@ -1,7 +1,19 @@
-{% extends 'Base.twig' %} {% set page = 'Home' %} {% block body %} {% if isLogged %}
-<a href='index.php?controller=login&action=logout'> Logout </a>
-<a href='index.php?controller=preguntas&action=index'> Preguntas </a>
-<a href='index.php?controller=preguntas&action=preguntar'> Preguntar </a>
-{% else %}
-<a href='index.php?controller=login&action=index'> Login </a>
-{% endif %} {% endblock %}
+{% extends 'Base.twig' %}
+{% set page = 'Home' %}
+{% block body %}
+  {% if isLogged %}
+    <a href='index.php?controller=login&action=logout'>
+      Logout
+    </a>
+    <a href='index.php?controller=preguntas&action=index'>
+      Preguntas
+    </a>
+    <a href='index.php?controller=preguntas&action=preguntar'>
+      Preguntar
+    </a>
+  {% else %}
+    <a href='index.php?controller=login&action=index'>
+      Login
+    </a>
+  {% endif %}
+{% endblock %}

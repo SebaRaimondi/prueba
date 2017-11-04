@@ -1,20 +1,25 @@
-{% extends 'Base.twig' %} {% set page = 'Preguntas' %} {% block body %}
-<a href='index.php'> Home </a>
-{% if preguntas|length > 0 %}
-<table>
-    <tr>
+{% extends 'Base.twig' %}
+{% set page = 'Preguntas' %}
+{% block body %}
+  <a href='index.php'>
+    Home
+  </a>
+  {% if preguntas | length > 0 %}
+    <table>
+      <tr>
         <th>Titulo</th>
         <th>Pregunta</th>
         <th>Usuario</th>
-    </tr>
-    {% for pregunta in preguntas %}
-    <tr>
-        <td>{{ pregunta.titulo }}</td>
-        <td>{{ pregunta.pregunta }}</td>
-        <td>{{ pregunta.usuario }}</td>
-    </tr>
-    {% endfor %}
-</table>
-{% else %}
-<p>No se encontraron resultados :(</p>
-{% endif %} {% endblock %}
+      </tr>
+      {% for pregunta in preguntas %}
+        <tr>
+          <td>{{ pregunta.titulo }}</td>
+          <td>{{ pregunta.pregunta }}</td>
+          <td>{{ pregunta.usuario }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No se encontraron resultados :(</p>
+  {% endif %}
+{% endblock %}
