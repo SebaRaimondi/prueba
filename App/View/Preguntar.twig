@@ -1,0 +1,8 @@
+{% extends 'Base.twig' %} {% set page = 'Preguntar' %} {% block body %}
+<a href='index.php'> Home </a>
+<form action="index.php?controller=Preguntas&action=newPregunta" method="post">
+    <input type="text" name="titulo" placeholder="Titulo" required autofocus>
+    <input type="text" name="pregunta" placeholder="Pregunta" required>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
